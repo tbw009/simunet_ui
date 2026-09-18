@@ -1,0 +1,72 @@
+{
+    "class": "Tank",
+    "category": "Unit opereration",
+    "model": {
+        "name": "Vessel",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": false,
+        "params": {
+            "V_s": {
+                "value": 0.05,
+                "description": "Tank Volume",
+                "unit": "m\u00b3"
+            },
+            "abserr": {
+                "value": 1e-08,
+                "description": "Absolute tolerance",
+                "unit": "-"
+            },
+            "relerr": {
+                "value": 1e-06,
+                "description": "Relative tolerance",
+                "unit": "-"
+            }
+        },
+        "vars": {
+            "q_s_f": {
+                "description": "Feed flow Rate",
+                "unit": "m\u00b3/s",
+                "value": [
+                ]
+            },
+            "T_s_f": {
+                "description": "Feed temperature",
+                "unit": "K",
+                "value": [
+                ]
+            },
+            "T_s": {
+                "description": "Outlet temperature",
+                "unit": "K",
+                "value": [
+                    290.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "liquid",
+                "description": "Tank feed input",
+                "vars": [
+                    "q_s_f",
+                    "T_s_f"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "liquid",
+                "description": "Tank output",
+                "vars": [
+                    "T_s"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}

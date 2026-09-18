@@ -1,0 +1,188 @@
+{
+    "class": "CSTR",
+    "category": "Unit opereration",
+    "model": {
+        "name": "CSTR",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": false,
+        "params": {
+            "E_a": {
+                "value": 72750.0,
+                "description": "Activation energy",
+                "unit": "J/mol"
+            },
+            "R": {
+                "value": 8.314,
+                "description": "Gas constant",
+                "unit": "J/mol/K"
+            },
+            "k_0": {
+                "value": 1200000000.0,
+                "description": "Arrhenius rate constant",
+                "unit": "1/s"
+            },
+            "dH_R": {
+                "value": -50000.0,
+                "description": "Enthalpy of reaction",
+                "unit": "J/mol"
+            },
+            "V_r": {
+                "value": 0.1,
+                "description": "Volume",
+                "unit": "m^3"
+            },
+            "rho_r": {
+                "value": 1000.0,
+                "description": "Density",
+                "unit": "kg/m^3"
+            },
+            "C_p_r": {
+                "value": 239.0,
+                "description": "Heat capacity",
+                "unit": "J/kg/K"
+            },
+            "V_c": {
+                "value": 0.02,
+                "description": "Cooling jacket volume",
+                "unit": "m^3"
+            },
+            "rho_c": {
+                "value": 1000.0,
+                "description": "Density",
+                "unit": "kg/m^3"
+            },
+            "C_p_c": {
+                "value": 239.0,
+                "description": "Heat capacity",
+                "unit": "J/kg/K"
+            },
+            "UA": {
+                "value": 833.3,
+                "description": "Heat transfer",
+                "unit": "J/s/K"
+            },
+            "abserr": {
+                "value": 1e-08,
+                "description": "Absolute tolerance",
+                "unit": "-"
+            },
+            "relerr": {
+                "value": 1e-06,
+                "description": "Relative tolerance",
+                "unit": "-"
+            }
+        },
+        "vars": {
+            "c_A_f": {
+                "description": "Feed concentration",
+                "unit": "mol/m^3",
+                "value": [
+                    0.0
+                ]
+            },
+            "q_r_f": {
+                "description": "Reactor feed flow rate",
+                "unit": "m^3/s",
+                "value": [
+                    0.0
+                ]
+            },
+            "T_r_f": {
+                "description": "Reactor feed temperature",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "c_A": {
+                "description": "Reactor concentration",
+                "unit": "mol/m^3",
+                "value": [
+                    500.0
+                ]
+            },
+            "T_r": {
+                "description": "Reactor temperature",
+                "unit": "K",
+                "value": [
+                    350.0
+                ]
+            },
+            "q_c_f": {
+                "description": "Cooling feed flow rate",
+                "unit": "m^3/s",
+                "value": [
+                    0.0
+                ]
+            },
+            "T_c_f": {
+                "description": "Cooling feed temperature",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "T_c": {
+                "description": "Cooling outlet temperature",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "liquid",
+                "description": "Reactor feed input",
+                "vars": [
+                    "c_A_f",
+                    "q_r_f",
+                    "T_r_f"
+                ]
+            },
+            "u_2": {
+                "type": "liquid",
+                "description": "Cooling jacket feed input",
+                "vars": [
+                    "q_c_f",
+                    "T_c_f"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "liquid",
+                "description": "Reactor output",
+                "vars": [
+                    "c_A",
+                    "T_r"
+                ]
+            },
+            "y_2": {
+                "type": "liquid",
+                "description": "Cooling jacket output",
+                "vars": [
+                    "T_c"
+                ]
+            },
+            "y_3": {
+                "type": "measure",
+                "description": "Reactor temperatur",
+                "vars": [
+                    "T_r"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [
+            [
+                "u_2",
+                "y_2"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "class": "Custom",
+    "category": "Custom",
+    "model": {
+        "name": "Custom model",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {
+            "compute_src": {
+                "value": "# Import necessary packages\nimport numpy as np\n\n# Get parameters\nparam_1 = self.get_param(\"param_1\")\n\n# Get vars\nvar_1 = self.get_var(\"var_1\")\n\n# Get time\nt = self.get_t()\n\n# Compute output vars\nvar_2 = np.array(var_1) + param_1 * np.array(t)\n\n# Finally store results\nself.set_var(\"var_2\", var_2)",
+                "description": "Python compute source",
+                "unit": "-",
+                "property": {
+                    "editor": "code",
+                    "options": null
+                }
+            }
+        },
+        "vars": {},
+        "u": {
+            "u_1": {
+                "type": "adaptive",
+                "description": "Sink",
+                "vars": []
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "adaptive",
+                "description": "Source",
+                "vars": []
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [
+            "u_1",
+            "y_1"
+        ]
+    }
+}

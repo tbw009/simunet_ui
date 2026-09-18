@@ -1,0 +1,40 @@
+{
+    "class": "CSVSource",
+    "category": "Balance border",
+    "model": {
+        "name": "CSV-Source",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {
+            "csv_file": {
+                "value": "",
+                "description": "CSV Source file",
+                "unit": "-",
+                "property": {
+                    "editor": "file",
+                    "options": {
+                        "filetypes": [
+                            ["CSV files", "*.csv"], 
+                            ["All files", "*"]
+                        ]
+                    }
+                }
+            }
+        },
+        "vars": {},
+        "u": {},
+        "y": {
+            "y_1": {
+                "type": "unknown",
+                "description": "source",
+                "vars": []
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}

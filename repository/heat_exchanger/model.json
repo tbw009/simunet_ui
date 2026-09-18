@@ -1,0 +1,182 @@
+{
+    "class": "HeatExchanger",
+    "category": "Unit opereration",
+    "model": {
+        "name": "Heatexchanger",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": false,
+        "params": {
+            "r_1": {
+                "value": 0.025,
+                "description": "Inner pipe radius",
+                "unit": "m"
+            },
+            "C_p_1": {
+                "value": 239.0,
+                "description": "Heat capacity of inner fluid",
+                "unit": "J/kg/K"
+            },
+            "rho_1": {
+                "value": 1000.0,
+                "description": "Densitiy of inner fluid",
+                "unit": "kg/m^3"
+            },
+            "r_2": {
+                "value": 0.05,
+                "description": "Outer pipe radius",
+                "unit": "m"
+            },
+            "C_p_2": {
+                "value": 239.0,
+                "description": "Heat capacity of outer fluid",
+                "unit": "J/kg/K"
+            },
+            "rho_2": {
+                "value": 1000.0,
+                "description": "Densitiy of outer fluid",
+                "unit": "kg/m^3"
+            },
+            "L": {
+                "value": 60.0,
+                "description": "Pipe length",
+                "unit": "m"
+            },
+            "z": {
+                "value": 25,
+                "description": "Number of cells",
+                "unit": "-"
+            },
+            "U": {
+                "value": 340.0,
+                "description": "Heat transfer coefficient",
+                "unit": "W/m^2/K"
+            },
+            "mode": {
+                "value": "countercurrent",
+                "description": "Mode of operation (countercurrent, cocurrent)",
+                "unit": "-",
+                "property": {
+                    "editor": "option",
+                    "options": ["cocurrent", "countercurrent"]
+                }
+            },
+            "abserr": {
+                "value": 1e-08,
+                "description": "Absolute tolerance",
+                "unit": "-"
+            },
+            "relerr": {
+                "value": 1e-06,
+                "description": "Relative tolerance",
+                "unit": "-"
+            }
+        },
+        "vars": {
+            "q_1_f": {
+                "description": "Feed flow rate inner pipe",
+                "unit": "m^3/s",
+                "value": [
+                    0.0
+                ]
+            },
+            "T_1_f": {
+                "description": "Feed temperature inner pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "T_1_o": {
+                "description": "Outlet Temp. inner pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "T_1": {
+                "description": "Temperature inner pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "q_2_f": {
+                "description": "Feed flow rate outer pipe",
+                "unit": "m^3/s",
+                "value": [
+                    0.0
+                ]
+            },
+            "T_2_f": {
+                "description": "Feed temperature outer pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "T_2_o": {
+                "description": "Outlet Temp. outer pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            },
+            "T_2": {
+                "description": "Temperature outer pipe",
+                "unit": "K",
+                "value": [
+                    300.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "liquid",
+                "description": "Inner pipe feed input",
+                "vars": [
+                    "q_1_f",
+                    "T_1_f"
+                ]
+            },
+            "u_2": {
+                "type": "liquid",
+                "description": "Outer pipe feed input",
+                "vars": [
+                    "q_2_f",
+                    "T_2_f"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "liquid",
+                "description": "Inner pipe output",
+                "vars": [
+                    "T_1_o"
+                ]
+            },
+            "y_2": {
+                "type": "liquid",
+                "description": "Outer pipe output",
+                "vars": [
+                    "T_2_o"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [
+            [
+                "u_1",
+                "y_1"
+            ],
+            [
+                "u_2",
+                "y_2"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "class": "ConstantSource",
+    "category": "Balance border",
+    "model": {
+        "name": "Const. Source",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {},
+        "vars": {},
+        "u": {},
+        "y": {
+            "y_1": {
+                "type": "adaptive",
+                "description": "source",
+                "vars": []
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}

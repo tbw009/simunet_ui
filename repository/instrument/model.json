@@ -1,0 +1,67 @@
+{
+    "class": "Instrument",
+    "category": "Instrumentation and Control",
+    "model": {
+        "name": "Instrument",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {
+            "s_range": {
+                "value": [
+                    4.0,
+                    20.0
+                ],
+                "description": "Signal range (DIN IEC 60381-1)",
+                "unit": "mA"
+            },
+            "m_range": {
+                "value": [
+                    223.15,
+                    773.15
+                ],
+                "description": "Measurement range (PT 100)",
+                "unit": "K"
+            }
+        },
+        "vars": {
+            "m": {
+                "description": "Measurement input",
+                "unit": "K",
+                "value": [
+                    223.15
+                ]
+            },
+            "s": {
+                "description": "Signal output",
+                "unit": "mA",
+                "value": [
+                    4.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "measure",
+                "description": "Instrument input",
+                "vars": [
+                    "m"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "signal",
+                "description": "Instrument output",
+                "vars": [
+                    "s"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}

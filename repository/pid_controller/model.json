@@ -1,0 +1,118 @@
+{
+    "class": "PIDController",
+    "category": "Instrumentation and Control",
+    "model": {
+        "name": "PID-Controller",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {
+            "y_range": {
+                "value": [
+                    4.0,
+                    20.0
+                ],
+                "description": "Range of controller output",
+                "unit": "-"
+            },
+            "k_p": {
+                "value": 50.0,
+                "description": "Proportional control gain",
+                "unit": "-"
+            },
+            "k_i": {
+                "value": 5.0,
+                "description": "Integral control gain",
+                "unit": "-"
+            },
+            "k_d": {
+                "value": 1.0,
+                "description": "Derivative control gain",
+                "unit": "-"
+            },
+            "beta": {
+                "value": 0.0,
+                "description": "Setpoint weighting for proportional control",
+                "unit": "-"
+            },
+            "gamma": {
+                "value": 0.0,
+                "description": "Setpoint weighting for derivative control",
+                "unit": "-"
+            },
+            "mode": {
+                "value": "direct",
+                "description": "Mode of operation (direct, inverse)",
+                "unit": "-",
+                "property": {
+                    "editor": "option",
+                    "options": ["direct", "inverse"]
+                }
+            },
+            "delta_t": {
+                "value": 0.36,
+                "description": "Time intervall",
+                "unit": "s"
+            }
+        },
+        "vars": {
+            "p_v": {
+                "description": "Process value",
+                "unit": "mA",
+                "value": [
+                ]
+            },
+            "m_v": {
+                "description": "Manipulated value",
+                "unit": "mA",
+                "value": [
+                    4.0
+                ]
+            },
+            "s_p": {
+                "description": "Set Point",
+                "unit": "mA",
+                "value": [
+                    0.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "signal",
+                "description": "Instrument input",
+                "vars": [
+                    "p_v"
+                ]
+            },
+            "u_2": {
+                "type": "signal",
+                "description": "Set Point input",
+                "vars": [
+                    "s_p"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "control",
+                "description": "Controller output",
+                "vars": [
+                    "m_v"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [],
+        "_PIDController__eP": null,
+        "_PIDController__eP1": null,
+        "_PIDController__eI": null,
+        "_PIDController__eD": null,
+        "_PIDController__eD1": null,
+        "_PIDController__eD2": null,
+        "_PIDController__t_last": 0
+    }
+}

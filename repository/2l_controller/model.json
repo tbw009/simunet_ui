@@ -1,0 +1,84 @@
+{
+    "class": "TwoLevelController",
+    "category": "Instrumentation and Control",
+    "model": {
+        "name": "2L-Controller",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {
+            "y_range": {
+                "value": [
+                    4.0,
+                    20.0
+                ],
+                "description": "Range of controller output",
+                "unit": "-"
+            },
+            "hysteresis": {
+                "value": 0.05,
+                "description": "Switch hysteresis",
+                "unit": "-"
+            },
+            "delta_t": {
+                "value": 0.36,
+                "description": "Time intervall",
+                "unit": "s"
+            }
+        },
+        "vars": {
+            "p_v": {
+                "description": "Process value",
+                "unit": "mA",
+                "value": [
+                    4.0
+                ]
+            },
+            "m_v": {
+                "description": "Manipulated value",
+                "unit": "mA",
+                "value": [
+                    4.0
+                ]
+            },
+            "s_p": {
+                "description": "Set Point",
+                "unit": "mA",
+                "value": [
+                    4.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "signal",
+                "description": "Instrument input",
+                "vars": [
+                    "p_v"
+                ]
+            },
+            "u_2": {
+                "type": "signal",
+                "description": "Set Point input",
+                "vars": [
+                    "s_p"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "control",
+                "description": "Controller output",
+                "vars": [
+                    "m_v"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [],
+        "_TwoLevelController__t_last": 0
+    }
+}

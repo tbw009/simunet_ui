@@ -1,0 +1,42 @@
+{
+    "class": "DataSource",
+    "category": "Balance border",
+    "model": {
+        "name": "Data-Source",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": { 
+            "samples": {
+                "value": [
+                    ["t", "a", "b"], 
+                    [
+                        [1.0, 110.0, 210.0],
+                        [2.0, 120.0, 220.0],
+                        [3.0, 130.0, 230.0]
+                    ]
+                ], 
+                "description": "Sample points", 
+                "unit": "-",
+                "property": {
+                    "editor": "table",
+                    "options": null
+                }
+            }
+        },
+        "vars": {},
+        "u": {},
+        "y": {
+            "y_1": {
+                "type": "adaptive",
+                "description": "source",
+                "vars": []
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}

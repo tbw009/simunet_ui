@@ -1,0 +1,77 @@
+{
+    "class": "Pump",
+    "category": "Unit opereration",
+    "model": {
+        "name": "Pump",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "site": "local",
+        "threadsafe": true,
+        "params": {
+            "c_range": {
+                "value": [
+                    4.0,
+                    20.0
+                ],
+                "description": "Range of control value",
+                "unit": "mA"
+            },
+            "q_range": {
+                "value": [
+                    0.0,
+                    0.006
+                ],
+                "description": "Range of flow rate",
+                "unit": "m^3\\s"
+            }
+        },
+        "vars": {
+            "c": {
+                "description": "Control value",
+                "unit": "mA",
+                "value": [
+                ]
+            },
+            "q": {
+                "description": "Flow Rate",
+                "unit": "m^3/s",
+                "value": [
+                    0.0
+                ]
+            }
+        },
+        "u": {
+            "u_1": {
+                "type": "liquid",
+                "description": "Pump feed input",
+                "vars": []
+            },
+            "u_2": {
+                "type": "control",
+                "description": "Control value input",
+                "vars": [
+                    "c"
+                ]
+            }
+        },
+        "y": {
+            "y_1": {
+                "type": "liquid",
+                "description": "Pump output",
+                "vars": [
+                    "q"
+                ]
+            }
+        },
+        "t": [
+            0
+        ],
+        "adj": [
+            [
+                "u_1",
+                "y_1"
+            ]
+        ]
+    }
+}

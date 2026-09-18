@@ -1,0 +1,25 @@
+{
+    "class": "Sink",
+    "category": "Balance border",
+    "model": {
+        "name": "Sink",
+        "description": "",
+        "dim": "unknown",
+        "domain": "unknown",
+        "threadsafe": true,
+        "params": {},
+        "vars": {},
+        "u": {
+            "u_1": {
+                "type": "adaptive",
+                "description": "sink",
+                "vars": []
+            }
+        },
+        "y": {},
+        "t": [
+            0
+        ],
+        "adj": []
+    }
+}
