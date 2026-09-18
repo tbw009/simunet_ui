@@ -1,0 +1,31 @@
+****************************************************
+* Glyfz Toolbar Graphics
+*             
+* Copyright © Glyfz 2006-2023
+* All Rights Reserved        
+*
+* Web: www.glyfz.com
+*
+****************************************************
+
+LICENSE AGREEMENT
+
+This license agreement DOES permit the following uses of the images(s):
+
+You may use the images within your application, in your web applications, on your company web site and in your help and documentation.  
+
+You may create derivative images based on the Glyfz images at any time however they must not be for re-sale.
+
+This license agreement DOES NOT PERMIT the following uses of the image(s):
+
+You may not sell any image or derivatives of the images, as stock files, in any size or format, either alone or as part of a image library or other product.
+
+REDISTRIBUTION RIGHTS 
+You may redistribute this archive to any party as long as this license file is included.
+
+COPYRIGHT
+All digital image files are owned by Glyfz.com
+
+DONATIONS
+While donations are not required in order to use the images they are most welcome. If you would like to donate please find the donation link on glyfz.com
+
